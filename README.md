@@ -16,6 +16,12 @@ Conta **Team/Enterprise no Claude:** o administrador precisa [adicionar o conect
 
 Quem já usa o produto encontra os mesmos botões em **Aplicativos → Equipe Integrada MCP**.
 
+## Testar no Cursor (local)
+
+A pasta em `~/.cursor/plugins/local` **precisa se chamar** `equipe-integrada` (com hífen). O Cursor usa o nome da pasta como título: `equipeintegrada-mcp` vira “Equipeintegrada Mcp”.
+
+Copie o conteúdo do repositório para `~/.cursor/plugins/local/equipe-integrada` e recarregue a janela (`Ctrl+Shift+P` → Reload Window). O selo “Local” é do Cursor; no Marketplace o subtítulo passa a ser o autor (**Equipe Integrada**).
+
 ## O que o assistente pode fazer
 
 - Consultar CRM, contatos, atividades, agenda, financeiro e fiscal — só o que a sua permissão já permite.

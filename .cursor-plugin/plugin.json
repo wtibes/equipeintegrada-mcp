@@ -1,6 +1,7 @@
 {
   "name": "equipe-integrada",
   "displayName": "Equipe Integrada",
+  "title": "Equipe Integrada",
   "description": "Connect ChatGPT, Claude, Cursor, Codex and Grok to Equipe Integrada CRM, activities, calendar and finance — with human confirmation before any change.",
   "version": "1.0.0",
   "author": {
