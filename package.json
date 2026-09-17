@@ -1,0 +1,10 @@
+{
+  "name": "equipe-integrada-plugin",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate": "node scripts/generate-shims.mjs",
+    "validate": "node scripts/validate.mjs",
+    "prepare-release": "node scripts/generate-shims.mjs && node scripts/validate.mjs"
+  }
+}

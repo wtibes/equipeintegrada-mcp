@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "equipe-integrada": {
+      "type": "http",
+      "url": "https://api.azzoempresarial.com.br/mcp"
+    }
+  }
+}

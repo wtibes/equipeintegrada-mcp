@@ -1,0 +1,44 @@
+{
+  "mcpUrl": "https://api.azzoempresarial.com.br/mcp",
+  "pluginName": "equipe-integrada",
+  "displayName": "Equipe Integrada",
+  "appPath": "/aplicativos/equipe-integrada-mcp",
+  "clients": {
+    "claude": {
+      "label": "Claude",
+      "cta": "Conectar no Claude",
+      "href": "https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=Equipe%20Integrada&connectorUrl=https%3A%2F%2Fapi.azzoempresarial.com.br%2Fmcp",
+      "listing": null,
+      "adminHref": "https://claude.ai/admin-settings/connectors?modal=add-custom-connector&connectorName=Equipe%20Integrada&connectorUrl=https%3A%2F%2Fapi.azzoempresarial.com.br%2Fmcp",
+      "note": "Confirme o nome e o endereço na tela do Claude e faça login na Equipe Integrada."
+    },
+    "chatgpt": {
+      "label": "ChatGPT",
+      "cta": "Abrir o ChatGPT",
+      "href": "https://chatgpt.com/",
+      "listing": null,
+      "note": "Abra o ChatGPT. Se Equipe Integrada não estiver na lista de conectores, use Avançado nesta página."
+    },
+    "cursor": {
+      "label": "Cursor",
+      "cta": "Adicionar ao Cursor",
+      "href": "cursor://anysphere.cursor-deeplink/mcp/install?name=equipe-integrada&config=eyJ1cmwiOiJodHRwczovL2FwaS5henpvZW1wcmVzYXJpYWwuY29tLmJyL21jcCJ9",
+      "listing": null,
+      "note": "O Cursor abre com o servidor preenchido. Instale e autorize com sua conta da Equipe Integrada."
+    },
+    "codex": {
+      "label": "Codex",
+      "cta": "Abrir o Codex",
+      "href": "https://chatgpt.com/codex",
+      "listing": null,
+      "note": "O mesmo conector do ChatGPT vale no Codex. Autorize Equipe Integrada depois de instalar."
+    },
+    "grok": {
+      "label": "Grok",
+      "cta": "Abrir conectores do Grok",
+      "href": "https://grok.com/connectors",
+      "listing": null,
+      "note": "Escolha um conector personalizado, confirme o endereço e faça login na Equipe Integrada."
+    }
+  }
+}
