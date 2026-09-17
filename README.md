@@ -39,7 +39,7 @@ Depois de editar:
 npm run prepare-release
 ```
 
-Isso regenera `.claude-plugin/`, `.mcp.json`, `.codex-plugin/` e este README. Não edite os arquivos gerados à mão.
+Isso regenera `.claude-plugin/`, `.cursor-plugin/`, `.mcp.json`, `.codex-plugin/` e este README. Não edite os arquivos gerados à mão.
 
 ## Avançado
 

@@ -6,7 +6,7 @@ Repo deste plugin: https://github.com/wtibes/equipeintegrada-mcp (público, sem 
 
 - [ ] Repo público com `plugin.json` na raiz (Agent Plugins)
 - [ ] `npm run prepare-release` sem diff
-- [ ] Logo em `assets/logo.svg`
+- [ ] Logo em `assets/logo.png` e `logo` no `.cursor-plugin/plugin.json`
 - [ ] README descreve instalação e OAuth
 - [ ] Submeter em https://cursor.com/marketplace/publish
 - [ ] Após aprovação: `clients.cursor.listing` = URL do marketplace Cursor

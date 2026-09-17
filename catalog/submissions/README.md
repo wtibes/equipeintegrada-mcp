@@ -14,7 +14,7 @@ Quando um listing for aprovado:
 - `listing-copy.md` — nome, descrição curta/longa, scopes, HITL
 - `checklist.md` — URLs dos formulários e o que anexar
 - `../install-links.json` — botões
-- `../../assets/logo.svg` — ícone
+- `../../assets/logo.png` — ícone
 
 Screenshots: capture o login OAuth e uma pergunta real (*quais atividades estão atrasadas?*) no cliente de cada marketplace. Não versionar dados de cliente.
 

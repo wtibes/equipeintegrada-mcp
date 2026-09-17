@@ -29,6 +29,19 @@ writeJson('.claude-plugin/plugin.json', {
   author: plugin.author
 })
 
+writeJson('.cursor-plugin/plugin.json', {
+  name: plugin.name,
+  displayName: 'Equipe Integrada',
+  description: plugin.description,
+  version: plugin.version,
+  author: plugin.author,
+  homepage: plugin.homepage,
+  repository: plugin.repository,
+  license: plugin.license,
+  keywords: plugin.keywords,
+  logo: 'assets/logo.png'
+})
+
 writeJson('.mcp.json', {
   mcpServers: {
     'equipe-integrada': {
@@ -89,7 +102,7 @@ Depois de editar:
 npm run prepare-release
 \`\`\`
 
-Isso regenera \`.claude-plugin/\`, \`.mcp.json\`, \`.codex-plugin/\` e este README. Não edite os arquivos gerados à mão.
+Isso regenera \`.claude-plugin/\`, \`.cursor-plugin/\`, \`.mcp.json\`, \`.codex-plugin/\` e este README. Não edite os arquivos gerados à mão.
 
 ## Avançado
 

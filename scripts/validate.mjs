@@ -81,10 +81,14 @@ for (const name of skillNames) {
   if (!/description:\s*>?.+\S/s.test(body)) fail(`skills/${name} needs description`)
 }
 
-const generated = ['.claude-plugin/plugin.json', '.mcp.json', '.codex-plugin/plugin.json']
+const generated = ['.claude-plugin/plugin.json', '.cursor-plugin/plugin.json', '.mcp.json', '.codex-plugin/plugin.json']
 for (const relative of generated) {
   if (!existsSync(join(root, relative))) fail(`run npm run generate — missing ${relative}`)
 }
+
+if (!existsSync(join(root, 'assets/logo.png'))) fail('assets/logo.png missing')
+const cursorPlugin = readJson('.cursor-plugin/plugin.json')
+if (cursorPlugin && cursorPlugin.logo !== 'assets/logo.png') fail('.cursor-plugin/plugin.json logo must be assets/logo.png')
 
 const claudeMcp = readJson('.mcp.json')
 if (claudeMcp && claudeMcp.mcpServers?.['equipe-integrada']?.url !== mcp?.mcpServers?.['equipe-integrada']?.url) {
