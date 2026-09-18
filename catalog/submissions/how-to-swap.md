@@ -13,4 +13,4 @@ Quando o marketplace aprovar:
 }
 ```
 
-Depois `npm run prepare-release` e copiar o JSON para o vue-eq. Não é preciso mudar o Vue.
+Depois `npm run prepare-release`. Se o app precisar dos botões: `npm run sync-vue`. Não é preciso mudar o Vue.

@@ -13,9 +13,13 @@ Repo deste plugin: https://github.com/wtibes/equipeintegrada-mcp (público, sem 
 
 ## ChatGPT + Codex
 
-- [ ] Mesmo `plugin.json` + `mcp.json` + `skills/`
-- [ ] Seguir https://learn.chatgpt.com/docs/build-plugins (diretório universal)
-- [ ] Após aprovação: `clients.chatgpt.listing` e `clients.codex.listing` (pode ser a mesma URL do plugin)
+- [ ] Mesmo `plugin.json` + `mcp.json` + `skills/` (não alterar `mcp.json` streamable-http)
+- [ ] `extensions.com.openai.interface` com website, privacidade, termos e suporte
+- [ ] Identidade verificada no OpenAI Platform + Apps Management write
+- [ ] Portal: tipo **With MCP**, URL `https://api.azzoempresarial.com.br/mcp` — https://developers.openai.com/plugins/deploy/submission
+- [ ] Colar `listing-copy.md` e `openai-test-cases.md`; apontar `openai-validation-run.md`
+- [ ] Credenciais da sandbox **só** no campo privado do portal OpenAI (não no GitHub)
+- [ ] Após aprovação: `clients.chatgpt.listing` e `clients.codex.listing`
 
 ## Claude Connectors Directory
 

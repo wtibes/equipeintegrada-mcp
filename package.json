@@ -5,6 +5,7 @@
   "scripts": {
     "generate": "node scripts/generate-shims.mjs",
     "validate": "node scripts/validate.mjs",
-    "prepare-release": "node scripts/generate-shims.mjs && node scripts/validate.mjs"
+    "prepare-release": "node scripts/generate-shims.mjs && node scripts/validate.mjs",
+    "sync-vue": "node scripts/generate-shims.mjs --sync-vue"
   }
 }

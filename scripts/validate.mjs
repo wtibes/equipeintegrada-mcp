@@ -33,6 +33,14 @@ if (plugin) {
     fail('plugin.json name must be lowercase kebab-case per Agent Plugins')
   }
   if (!plugin.description || !plugin.version) fail('plugin.json needs description and version')
+  if (plugin.homepage !== 'https://equipeintegrada.com') fail('plugin.json homepage must be the product site')
+  const openai = plugin.extensions?.['com.openai']?.interface
+  for (const field of ['websiteURL', 'privacyPolicyURL', 'termsOfServiceURL', 'supportURL', 'logo', 'displayName']) {
+    if (!openai?.[field]) fail(`plugin.json extensions.com.openai.interface.${field} missing`)
+  }
+  if (openai && !openai.privacyPolicyURL.includes('/privacidade')) fail('privacy URL must be equipeintegrada.com/privacidade')
+  if (openai && !openai.termsOfServiceURL.includes('/termos')) fail('terms URL must be equipeintegrada.com/termos')
+  if (openai?.logo && openai.logo.includes('..')) fail('OpenAI logo path must stay inside the package')
 }
 
 const mcp = readJson('mcp.json')
@@ -62,6 +70,9 @@ if (links) {
   if (!links.clients.claude.href.includes('modal=add-custom-connector')) {
     fail('claude href must prefill the custom connector dialog until listing exists')
   }
+  if (!links.clients.cursor.href.startsWith('cursor://')) {
+    fail('cursor href must stay the Cursor deeplink until listing exists')
+  }
 }
 
 const skillsDir = join(root, 'skills')
@@ -87,23 +98,26 @@ for (const relative of generated) {
 }
 
 if (!existsSync(join(root, 'assets/logo.png'))) fail('assets/logo.png missing')
+if (!existsSync(join(root, 'catalog/submissions/openai-test-cases.md'))) {
+  fail('catalog/submissions/openai-test-cases.md missing')
+}
+if (!existsSync(join(root, 'catalog/submissions/openai-validation-run.md'))) {
+  fail('catalog/submissions/openai-validation-run.md missing')
+}
+
 const cursorPlugin = readJson('.cursor-plugin/plugin.json')
 if (cursorPlugin && cursorPlugin.logo !== 'assets/logo.png') fail('.cursor-plugin/plugin.json logo must be assets/logo.png')
+if (cursorPlugin && cursorPlugin.name !== 'equipe-integrada') fail('.cursor-plugin/plugin.json name must stay equipe-integrada')
+if (cursorPlugin?.extensions) fail('.cursor-plugin/plugin.json must not include OpenAI extensions')
+
+const codexPlugin = readJson('.codex-plugin/plugin.json')
+if (codexPlugin && !codexPlugin.interface?.privacyPolicyURL) {
+  fail('.codex-plugin/plugin.json interface missing — run npm run generate')
+}
 
 const claudeMcp = readJson('.mcp.json')
 if (claudeMcp && claudeMcp.mcpServers?.['equipe-integrada']?.url !== mcp?.mcpServers?.['equipe-integrada']?.url) {
   fail('.mcp.json url drifted from mcp.json — run npm run generate')
-}
-
-const vueCopy = [
-  join(root, '../vue-eq/src/components/aplicativos/apps/mcp-install-links.json'),
-  join(process.env.USERPROFILE || '', 'Documents/vue-eq/src/components/aplicativos/apps/mcp-install-links.json')
-].find((path) => existsSync(path))
-if (vueCopy) {
-  const vueLinks = JSON.parse(readFileSync(vueCopy, 'utf8'))
-  if (JSON.stringify(vueLinks) !== JSON.stringify(links)) {
-    fail('vue-eq mcp-install-links.json is out of sync — run npm run generate')
-  }
 }
 
 if (errors.length) {

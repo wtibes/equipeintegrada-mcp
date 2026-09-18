@@ -7,7 +7,7 @@
     "name": "Equipe Integrada",
     "url": "https://equipeintegrada.com"
   },
-  "homepage": "https://github.com/wtibes/equipeintegrada-mcp",
+  "homepage": "https://equipeintegrada.com",
   "repository": "https://github.com/wtibes/equipeintegrada-mcp",
   "license": "MIT",
   "keywords": [
@@ -16,5 +16,29 @@
     "erp",
     "equipe-integrada",
     "oauth"
-  ]
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Equipe Integrada",
+        "shortDescription": "CRM, atividades, agenda e financeiro da Equipe Integrada, com confirmação antes de qualquer alteração.",
+        "longDescription": "Conecta o ChatGPT e o Codex à Equipe Integrada com OAuth 2.1. A pessoa entra com a mesma conta do produto, escolhe a empresa e o assistente só vê o que ela já pode ver. Consultas cobrem negócios, contatos, atividades, agenda, financeiro e resumos fiscais. Escritas nascem como proposta e só gravam depois de confirmar_acao. Não há API key nem Client Secret para colar.",
+        "developerName": "Equipe Integrada",
+        "category": "Productivity",
+        "capabilities": ["Read", "Write"],
+        "websiteURL": "https://equipeintegrada.com",
+        "privacyPolicyURL": "https://equipeintegrada.com/privacidade/",
+        "termsOfServiceURL": "https://equipeintegrada.com/termos/",
+        "supportURL": "https://equipeintegrada.com",
+        "defaultPrompt": [
+          "Quais atividades estão atrasadas?",
+          "O que está na minha agenda hoje?",
+          "Quais alertas financeiros preciso ver?"
+        ],
+        "brandColor": "#0F466B",
+        "logo": "./assets/logo.png",
+        "composerIcon": "./assets/logo-mark.png"
+      }
+    }
+  }
 }

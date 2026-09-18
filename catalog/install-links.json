@@ -17,7 +17,7 @@
       "cta": "Abrir o ChatGPT",
       "href": "https://chatgpt.com/",
       "listing": null,
-      "note": "Abra o ChatGPT. Se Equipe Integrada não estiver na lista de conectores, use Avançado nesta página."
+      "note": "No app Windows: Settings → MCP servers → URL https://api.azzoempresarial.com.br/mcp. Skills: veja o README do plugin. Sem listing no diretório OpenAI, o botão só abre o ChatGPT."
     },
     "cursor": {
       "label": "Cursor",
