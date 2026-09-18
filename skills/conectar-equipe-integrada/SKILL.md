@@ -18,6 +18,8 @@ Prefer one of these when the user has just connected and has not specified a tas
 - O que está na minha agenda hoje?
 - Quais alertas financeiros preciso ver?
 
+If they ask how to use the product (cadastro, where a button is, a tutorial), call `buscar_ajuda` and cite the article. Do not invent steps. Page Agent / clicking the UI is out of scope for MCP.
+
 If they name a domain (CRM, financeiro, fiscal), call `descrever_capacidades` first when you need the allowed metrics and filters, then `consultar_dados` or the matching search tool.
 
 ## Rules
